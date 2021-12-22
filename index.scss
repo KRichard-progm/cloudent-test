@@ -1,0 +1,15 @@
+body{
+  $background:EAEEF0;
+}
+
+body{
+  background:$background ;
+}
+
+li:hover{
+  background: #B4C5D1;
+
+  & li a:hover{
+    color: #5F6F7D !important;
+  }
+}
