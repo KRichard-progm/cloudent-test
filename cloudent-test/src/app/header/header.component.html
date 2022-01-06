@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<header class="menu d-flex justify-content-between align-items-baseline">
+  <div class="d-flex align-items-center">
+    <div id="icon">
+
+      <img src="https://img.icons8.com/ios/50/000000/cloud.png"/>
+    </div>
+
+    <div class="drop d-flex align-items-center" >
+      <a href="#"><p>Patients</p></a>
+      <a href="#"><p>Calendar</p></a>
+      <a href="#"><p>Invoice</p></a>
+    </div>
+  </div>
+  <div class="d-flex align-items-center" style="flex-wrap: wrap">
+    <div id="search-bar">
+      <nav class="navbar navbar-light ">
+        <div class="container-fluid">
+          <form class=" form d-flex">
+            <img src="../src/assets/search.png"  width="20px" height="20px"
+                 style="position: absolute;margin-left: 5px; top: 13px" alt="">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <div id="drop-setting-btn">
+      <a href="#">Settings</a>
+    </div>
+
+    <div id="member">
+      <button style="color: #96A1AB" mat-button [matMenuTriggerFor]="animals">member.name <span><i class="fa fa-caret-down"></i></span></button>
+      <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+      </mat-menu>
+
+      <mat-menu #vertebrates="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+        <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+        <button mat-menu-item>Birds</button>
+        <button mat-menu-item>Mammals</button>
+      </mat-menu>
+
+      <mat-menu #invertebrates="matMenu">
+        <button mat-menu-item>Insects</button>
+        <button mat-menu-item>Molluscs</button>
+        <button mat-menu-item>Crustaceans</button>
+        <button mat-menu-item>Corals</button>
+        <button mat-menu-item>Arachnids</button>
+        <button mat-menu-item>Velvet worms</button>
+        <button mat-menu-item>Horseshoe crabs</button>
+      </mat-menu>
+
+      <mat-menu #fish="matMenu">
+        <button mat-menu-item>Baikal oilfish</button>
+        <button mat-menu-item>Bala shark</button>
+        <button mat-menu-item>Ballan wrasse</button>
+        <button mat-menu-item>Bamboo shark</button>
+        <button mat-menu-item>Banded killifish</button>
+      </mat-menu>
+
+      <mat-menu #amphibians="matMenu">
+        <button mat-menu-item>Sonoran desert toad</button>
+        <button mat-menu-item>Western toad</button>
+        <button mat-menu-item>Arroyo toad</button>
+        <button mat-menu-item>Yosemite toad</button>
+      </mat-menu>
+
+      <mat-menu #reptiles="matMenu">
+        <button mat-menu-item>Banded Day Gecko</button>
+        <button mat-menu-item>Banded Gila Monster</button>
+        <button mat-menu-item>Black Tree Monitor</button>
+        <button mat-menu-item>Blue Spiny Lizard</button>
+        <button mat-menu-item disabled>Velociraptor</button>
+      </mat-menu>
+    </div>
+
+  </div>
+
+</header>
